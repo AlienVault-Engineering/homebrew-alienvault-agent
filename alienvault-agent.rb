@@ -16,7 +16,7 @@ class AlienvaultAgent < Formula
     (etc/"osquery").install "osquery.flags.example"
     (etc/"osquery/certs").mkpath
     (etc/"osquery/certs").install "certs.pem"
-    (etc/"log/osquery").mkpath
+    (log/"osquery").mkpath
   end
 
   def plist; <<~EOS
