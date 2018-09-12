@@ -2,7 +2,7 @@ class AlienvaultAgent < Formula
   desc "AlienVault Agent"
   homepage "https://www.alienvault.com/"
   url "https://s3-us-west-2.amazonaws.com/ci-otxb-portal-osquery/repo/osx/alienvault-agent-1.0.1.tar.gz"
-  sha256 "ebeb9c74549b2759c6589e6b1a9020bd4ea62b8141ca7e2b4ec20406e4e0c15c"
+  sha256 "26a904ac9d24a985c8ba57ad78ffe08f8b769bbb53cefca76de52bf2abba8f2f"
   version "1.0.1"
   plist_options :startup => true
 
@@ -12,6 +12,7 @@ class AlienvaultAgent < Formula
     bin.install "osqueryi"
     bin.install "osqueryd"
     bin.install "osqueryctl"
+    bin.install "osqueryd-run.sh"
     (var/"osquery").mkpath
     (var/"osquery").install "osquery.flags.example"
     (var/"osquery/certs").mkpath
@@ -32,9 +33,7 @@ class AlienvaultAgent < Formula
       <string>com.facebook.osqueryd</string>
       <key>ProgramArguments</key>
       <array>
-        <string>/usr/local/bin/osqueryd</string>
-        <string>--flagfile=/private/var/osquery/osquery.flags</string>
-        <string>--logger_min_stderr=1</string>
+        <string>/usr/local/bin/osqueryd-run.sh</string>
       </array>
       <key>RunAtLoad</key>
       <true/>
