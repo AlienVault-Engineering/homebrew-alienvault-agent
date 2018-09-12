@@ -12,10 +12,10 @@ class AlienvaultAgent < Formula
     bin.install "osqueryi"
     bin.install "osqueryd"
     bin.install "osqueryctl"
-    (etc/"osquery").mkpath
-    (etc/"osquery").install "osquery.flags.example"
-    (etc/"osquery/certs").mkpath
-    (etc/"osquery/certs").install "certs.pem"
+    (var/"osquery").mkpath
+    (var/"osquery").install "osquery.flags.example"
+    (var/"osquery/certs").mkpath
+    (var/"osquery/certs").install "certs.pem"
     (var/"log/osquery").mkpath
   end
 
