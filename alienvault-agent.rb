@@ -2,7 +2,7 @@ class AlienvaultAgent < Formula
   desc "AlienVault Agent"
   homepage "https://www.alienvault.com/"
   url "https://s3-us-west-2.amazonaws.com/ci-otxb-portal-osquery/repo/osx/alienvault-agent-1.0.1.tar.gz"
-  sha256 "698e698ae4c4ab73891082489e91343708faf21048fe21fc65f88bf8186e0131"
+  sha256 "b2285ef4d80b976d6fd559a830684c8da49c3541fb6220476cdeb94c597aca26"
   version "1.0.1"
   plist_options :startup => true
 
