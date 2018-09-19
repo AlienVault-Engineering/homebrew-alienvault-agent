@@ -2,7 +2,7 @@ class AlienvaultAgent < Formula
   desc "AlienVault Agent"
   homepage "https://www.alienvault.com/"
   url "https://s3-us-west-2.amazonaws.com/ci-otxb-portal-osquery/repo/osx/alienvault-agent-1.0.1.tar.gz"
-  sha256 "a7f3ad12a6830fc4ac064f9d9e96888af913c560fc43693aa00820ea70805769"
+  sha256 "ad073aace2d820570cc0c49d56e0381d14ca24e8663a9936ea7408c7494d0df5"
   version "1.0.1"
   plist_options :startup => true
 
@@ -13,10 +13,7 @@ class AlienvaultAgent < Formula
     bin.install "osqueryd"
     bin.install "osqueryctl"
     bin.install "osqueryd-run.sh"
-    bin.install "alienvault-agent-stop.sh"
-    bin.install "alienvault-agent-start.sh"
-    bin.install "alienvault-agent-uninstall.sh"
-    bin.install "alienvault-agent-update.sh"
+    bin.install "alienvault-agent.sh"
     (var/"osquery").mkpath
     (var/"osquery").install "osquery.flags.example"
     (var/"osquery/certs").mkpath
